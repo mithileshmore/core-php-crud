@@ -1,0 +1,107 @@
+<DOCTYPE! html>
+<html lang="en">
+<head>
+<title>Add details</title>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+function Validate() {
+    var name = document.forms["UpdateForm"]["name"];
+    var email = document.forms["UpdateForm"]["email"];
+    var password = document.forms["UpdateForm"]["password"];
+    if (name.value.trim() == "" ) {
+        window.alert("Please enter a valid name.");
+        name.focus();
+        return false;
+    }
+    if (name.value == "") {
+        window.alert("Please enter your name.");
+        name.focus();
+        return false;
+    }
+    if (!/^[a-zA-Z]*$/g.test(name.value)) {
+        alert("Invalid characters in Name. Please enter alphabets only.");
+        name.focus();
+        return false;
+    }
+    if (email.value == "") {
+        window.alert("Please enter a e-mail address.");
+        email.focus();
+        return false;
+    }
+    if (email.value.indexOf("@", 0) < 0) {
+        exit('@ error');
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+    if (email.value.indexOf(".", 0) < 0) {
+        exit('dot error');
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+    if (password.value.trim() == "" ) {
+        window.alert("Please enter a password.");
+        password.focus();
+        return false;
+    }
+    if (password.value == "") {
+        window.alert("Please enter your password");
+        password.focus();
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+
+<body>
+    <div id="grad1">
+        <div class="page-header">
+            <h1 class="text-center"> REGISTER </h1>
+        </div>
+        <form class="form-horizontal" name="UpdateForm" action="submit.php" onsubmit="return Validate();" method="post" enctype='multipart/form-data'>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Name:</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="name" placeholder="Enter your name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control" name="email" placeholder="Enter your email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Password:</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control" name="password" placeholder="Enter your password">
+                </div>
+            </div>
+
+            <input type="hidden" name="salary">
+            <input type="hidden" name="telephone">
+            <input type="hidden" name="hobby">
+
+            </br>
+            </br>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Register</button>
+                </div>
+            </div>
+
+            </br>
+
+        </form>
+    </div>
+</body>
+</html>

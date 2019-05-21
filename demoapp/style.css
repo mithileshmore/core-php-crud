@@ -1,0 +1,166 @@
+h1 {
+    text-align: left;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+html {
+    background-color: #ECCCC5;
+    /* For browsers that do not support gradients */
+}
+
+body {
+    height: 100%;
+    font-family: "Times New Roman", Times, serif;
+}
+
+div p {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 40px;
+    color: brown;
+}
+
+div p text {
+    color: yellow;
+}
+
+#grad1 {
+    height: 100%;
+    background-color: #ECCCC5;
+    background-image: linear-gradient(#ECCCC5, #DF4928);
+}
+
+.button {
+    background-color: gainsboro;
+    border: solid black 1px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.updatebutton {
+    background-color: gainsboro;
+    border: solid black 1px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.textarea background-color:gainsboro;
+{
+    border: solid black 1px;
+    color: white;
+    padding: 8px 15px;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.primary-content {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /* ADJUSTMENT */
+    margin: 0;
+    /* NEW */
+}
+
+.mycontainer {
+    padding-right: 400px;
+    padding-left: 400px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 70%;
+    border: 1px solid black;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+.center_div {
+    margin: 5 auto;
+    /* value of your choice which suits your alignment */
+}
+
+input[type=text] {
+    background-color: gainsboro !important
+}
+
+textarea {
+    background-color: gainsboro !important
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: "Times New Roman", Times, serif;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.multiselect {
+    width: 50px;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 50%;
+    font-weight: bold;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+}
+
+#checkboxes label {
+    display: block;
+}
+
+#checkboxes label:hover {
+    background-color: #1e90ff;
+}

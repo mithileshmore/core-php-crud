@@ -1,0 +1,81 @@
+<DOCTYPE! html>
+<html lang="en">
+<head>
+<title>Add details</title>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+function Validate() {
+    var name = document.forms["RegForm"]["name"];
+    var email = document.forms["RegForm"]["email"];
+    var password = document.forms["RegForm"]["password"];
+    if (name.value == "") {
+        window.alert("Please enter your name.");
+        name.focus();
+        return false;
+    }
+    if (email.value == "") {
+        window.alert("Please enter a e-mail address.");
+        email.focus();
+        return false;
+    }
+    if (email.value.indexOf("@", 0) < 0) {
+        exit('@ error');
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+    if (email.value.indexOf(".", 0) < 0) {
+        exit('dot error');
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+    if (password.value == "") {
+        window.alert("Please enter your password");
+        password.focus();
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+
+<body>
+    <div id="grad1">
+        <div class="page-header">
+            <h2 class="mycontainer center_div">LOGIN </h2>
+        </div>
+
+        <form class="form-horizontal" name="LoginForm" action="checklogin.php" onsubmit="return Validate()" method="post">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="email" placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="password">Password:</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control" name="password" placeholder="Enter your password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" name="Submit">LOGIN</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <small>Not a member? </small><a href="register.html">Register</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
